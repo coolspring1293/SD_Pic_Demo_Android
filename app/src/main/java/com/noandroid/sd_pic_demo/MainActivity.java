@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
-
+    // get the graph from sd cd
     private Bitmap getDiskBitmap(String pathString) {
         Bitmap bitmap = null;
         try {
