@@ -13,12 +13,12 @@
     tools:showIn="@layout/activity_main">
 
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="250px"
-        android:background="@color/editBg"
-        android:layout_alignParentTop="true"
-        android:id="@+id/et"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="250px"
+            android:background="@color/editBg"
+            android:layout_alignParentTop="true"
+            android:id="@+id/et"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -26,24 +26,24 @@
             android:onClick="gallery"
             android:text="获取图库图片"
             android:id="@+id/button"
-            android:layout_below="@+id/et"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="39dp" />
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="150px"
             android:onClick="camera"
             android:text="拍照获取图片"
-            android:layout_below="@+id/button"
+            android:id="@+id/button2"
+            android:layout_alignTop="@+id/button"
             android:layout_alignParentStart="true" />
 
         <ImageView
             android:id="@+id/iv_image"
             android:layout_width="wrap_content"
-            android:layout_height="150px"
+            android:layout_height="@dimen/ImageViewHeight"
             android:src="@drawable/zz_00"
-            android:layout_above="@+id/iv"
-            android:layout_toEndOf="@+id/et" />
+            android:layout_below="@+id/iv"
+            android:layout_alignParentStart="true" />
 
 
 
@@ -53,12 +53,13 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="150px"
+            android:layout_height="@dimen/ImageViewHeight"
             android:id="@+id/iv"
             android:src="@drawable/zz_01"
 
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="52dp"
+            android:layout_below="@+id/button"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/button"
             android:layout_alignEnd="@+id/iv_image" />
 
 
