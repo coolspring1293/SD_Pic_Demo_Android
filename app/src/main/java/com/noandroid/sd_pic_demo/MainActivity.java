@@ -210,9 +210,7 @@ public class MainActivity extends AppCompatActivity {
             }
             try {
                 // 将临时文件删除
-                FileOutputStream stream = new FileOutputStream(path + "/familycontact/icon/tmp_file/" + tempFile.getName());
-                stream.flush();
-                stream.close();
+
                 tempFile.delete();
             } catch (Exception e) {
                 e.printStackTrace();
