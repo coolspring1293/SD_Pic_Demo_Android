@@ -1,68 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#E8F0F3"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.noandroid.sd_pic_demo.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_main"
+    tools:context="com.example.admin.myapplication.MainActivity">
 
+    <fragment
+        android:id="@+id/fragment_contacts"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        class = "com.example.admin.myapplication.ContactsActivity"/>
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="250px"
-            android:background="@color/editBg"
-            android:layout_alignParentTop="true"
-            android:id="@+id/et"/>
+    <fragment
+        android:id="@+id/fragment_records"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        class = "com.example.admin.myapplication.RecordsActivity"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="150px"
-            android:onClick="gallery"
-            android:text="获取图库图片"
-            android:id="@+id/button"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="150px"
-            android:onClick="camera"
-            android:text="拍照获取图片"
-            android:id="@+id/button2"
-            android:layout_alignTop="@+id/button"
-            android:layout_alignParentStart="true" />
+    <fragment
+        android:id="@+id/fragment_dialing"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        class = "com.example.admin.myapplication.DialingActivity"/>
 
-        <ImageView
-            android:id="@+id/iv_image"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/ImageViewHeight"
-            android:src="@drawable/zz_00"
-            android:layout_below="@+id/iv"
-            android:layout_alignParentStart="true" />
-
-
-
-
-
-
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/ImageViewHeight"
-            android:id="@+id/iv"
-            android:src="@drawable/zz_01"
-
-            android:layout_below="@+id/button"
-            android:layout_alignParentStart="true"
-            android:layout_toStartOf="@+id/button"
-            android:layout_alignEnd="@+id/iv_image" />
-
-
-
-
-</RelativeLayout>
+    <com.example.admin.myapplication.FragmentIndicator
+        android:id="@+id/indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFCEE"/>
+</LinearLayout>
